@@ -1,5 +1,6 @@
 package com.example.singleasynctaskdemo;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,6 +33,7 @@ public class MainActivity extends ActionBarActivity implements AsyncRequest.OnAs
     @Override
     public void asyncResponse(String response) {
         Log.e("app","Res...is...."+response.toString());
+        startActivity(new Intent(getApplicationContext(),GetMethodActivity.class));
 
     }
 
